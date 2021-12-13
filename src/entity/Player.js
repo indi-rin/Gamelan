@@ -46,9 +46,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     }
   }
 
-  updateJump(cursors) {
+  updateJump(cursors, jumpSound) {
     if (cursors.up.isDown && this.body.touching.down) {
       this.setVelocityY(-800);
+      jumpSound.play(); // Play our jump sound here
     }
   }
 
@@ -58,10 +59,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     }
   }
 
-  update(cursors) {
+  update(cursors, jumpSound) {
     // << INSERT CODE HERE >>
     this.updateMovement(cursors);
-    this.updateJump(cursors);
+    this.updateJump(cursors, jumpSound);
     // On update, check to see if Josh is in the air (see below)
     this.updateInAir();
   }

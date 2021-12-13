@@ -13,6 +13,18 @@ export default class Laser extends Phaser.Physics.Arcade.Sprite {
     this.lifespan = 900;
     // Important to not apply gravity to the laser bolt!
     this.body.setAllowGravity(false);
+    // Our reset function will take care of initializing the remaining fields
+    this.reset(x, y, facingLeft);
+  }
+
+  // Reset this laserbolt to start at a particular location and
+  // fire in a particular direction.
+  reset(x, y, facingLeft) {
+    this.setActive(true);
+    this.setVisible(true);
+    this.lifespan = 900;
+    this.facingLeft = facingLeft;
+    this.setPosition(x, y);
   }
 
   // Check which direction the player is facing and move the laserbolt in that direction as long as it lives

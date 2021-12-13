@@ -13,9 +13,10 @@ export default class Gun extends Phaser.Physics.Arcade.Sprite {
   }
 
   // Check if the shoot button is pressed and how long its been since we last fired
-  update(time, player, cursors, fireLaserFn) {
+  update(time, player, cursors, fireLaserFn, laserSound) {
     if (cursors.space.isDown && time > this.lastFired) {
       if (player.armed) {
+        laserSound.play();
         fireLaserFn(); // We'll implement this function in FgScene
         this.lastFired = time + this.fireDelay;
       }
