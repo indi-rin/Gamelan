@@ -37,8 +37,12 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
     // Neutral (no movement)
     else {
       this.setVelocityX(0);
-      // Whenever Josh is not moving, use the idleUnarmed animation
-      this.play("idleUnarmed");
+      // Whenever Josh is not moving, use the idleUnarmed or idleArmed animation depending on if he's armed
+      if (!this.armed) {
+        this.anims.play("idleUnarmed");
+      } else {
+        this.anims.play("idleArmed");
+      }
     }
   }
 
