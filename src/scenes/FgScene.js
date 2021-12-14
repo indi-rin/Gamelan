@@ -27,12 +27,12 @@ export default class FgScene extends Phaser.Scene {
   create() {
     // Create game entities
     // << CREATE GAME ENTITIES HERE >>
-    this.warrior = new Warrior(this, 100, 140, "warrior").setScale(0.1);
+    this.warrior = new Warrior(this, 100, 335, "warrior").setScale(0.1);
     this.platformGroup = this.physics.add.staticGroup({ classType: Platform });
     this.createPlatform(200, 500);
     this.createPlatform(950, 500);
-    this.enemy1 = new Enemy(this, 900, 140, "enemy").setScale(0.1);
-    this.enemy2 = new Enemy(this, 300, 140, "enemy").setScale(0.1);
+    this.enemy1 = new Enemy(this, 900, 335, "enemy").setScale(0.1);
+    this.enemy2 = new Enemy(this, 300, 335, "enemy").setScale(0.1);
 
     // Create sounds
     // << CREATE SOUNDS HERE >>
@@ -59,11 +59,19 @@ export default class FgScene extends Phaser.Scene {
   hit1() {
     this.hitSound1.play();
     this.enemy1.disableBody(true, true);
+    setTimeout(() => {
+      const x = Math.floor(Math.random() * 300 + 700);
+      this.enemy1.enableBody(true, x, 335, true, true);
+    }, 2000);
   }
 
   hit2() {
     this.hitSound2.play();
     this.enemy2.disableBody(true, true);
+    setTimeout(() => {
+      const x = Math.floor(Math.random() * 400 + 50);
+      this.enemy2.enableBody(true, x, 335, true, true);
+    }, 2000);
   }
 
   // time: total time elapsed (ms)
