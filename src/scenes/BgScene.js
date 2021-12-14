@@ -8,16 +8,13 @@ export default class BgScene extends Phaser.Scene {
   preload() {
     // Preload Sprites
     // << LOAD SPRITE HERE >>
-    this.load.image("sky", "assets/backgrounds/sky.png");
-    this.load.image("logo", "assets/backgrounds/fullBlastLogo.png");
-    // could also use this.load.path = "assets/backgrounds"; and then this.load.image("sky", "/sky.png");
+    this.load.image("background", "assets/backgrounds/background.png");
   }
 
   create() {
     // Create Sprites
     // << CREATE SPRITE HERE >>
-    this.add.image(-160, 0, "sky").setOrigin(0).setScale(0.5);
-    this.add.image(380, 80, "logo").setScale(5);
+    this.add.image(0, 0, "background").setOrigin(0).setScale(0.8);
     // x and y coordinates, image name inside the (), the starting point of the object (0-1), and the horizontal scale of the object
   }
 }
