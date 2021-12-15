@@ -1,7 +1,7 @@
 {
-  "name": "PhaserWorkshop",
+  "name": "GamelanLegacy",
   "version": "1.0.0",
-  "description": "A workshop for getting started with Phaser",
+  "description": "An introduction to Phaser",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server"
