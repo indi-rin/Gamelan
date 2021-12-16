@@ -50,6 +50,19 @@ export default class FgScene extends Phaser.Scene {
 
     // Assign cursors
     this.cursors = this.input.keyboard.createCursorKeys();
+
+    // world bounds - only applicable to all edges though, not just the sides
+    this.warrior.body.setCollideWorldBounds(true);
+    this.warrior.body.onWorldBounds = true; // emits worldbounds event when warrior collides with the boundary
+    this.physics.world.on("worldbounds", (body, up, down, left, right) => {
+      // if warrior hits the bottom
+      if (down) {
+        body.gameObject.disableBody(true, true); // remove warrior sprite if fallen between the platforms
+        setTimeout(() => {
+          body.gameObject.enableBody(true, 100, 335, true, true); // respaw after 1.2 seconds
+        }, 1200);
+      }
+    });
   }
 
   createPlatform(x, y) {
