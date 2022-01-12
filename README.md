@@ -1,6 +1,6 @@
 # Gamelan Legacy
 
-A very basic game about wearing gamelans for armor and creating music when you jump and run into your enemies.
+A very basic game about wearing gamelans for armor and creating music when you jump and run into your enemies. Watch a short video demo [here](https://www.youtube.com/watch?v=8RUn3GSJvDI&ab_channel=IndiRinearson)!
 
 ## Backstory
 
