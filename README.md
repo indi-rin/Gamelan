@@ -4,7 +4,7 @@ A very basic game about wearing gamelans for armor and creating music when you j
 
 ## Backstory
 
-When I was in college, a friend of mine was in our school's gamelan ensemble. While looking up videos of gamelan music to explain to me what a gamelan, she encountered one titled "Gamelan." At the time, I joked that it sounded like a video game - maybe something where all the characters wear gamelans for armor so when you fight each other, it creates music. Today, I'm taking the first step towards bringing that idea to life.
+When I was in college, a friend of mine was in our school's gamelan ensemble. While looking up videos of gamelan music to explain to me what a gamelan, she encountered one titled "Gamelan Legacy." At the time, I joked that it sounded like a video game - maybe something where all the characters wear gamelans for armor so when you fight each other, it creates music. Today, I'm taking the first step towards bringing that idea to life.
 
 ## Attributions
 
